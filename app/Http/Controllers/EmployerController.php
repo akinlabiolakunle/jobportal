@@ -35,11 +35,8 @@ class EmployerController extends Controller
     public function store(Request $request)
     {
         //
-        public function __construct()
-    {
-        $this->middleware('auth');
-    }
-    }
+        }
+
 
     /**
      * Display the specified resource.
