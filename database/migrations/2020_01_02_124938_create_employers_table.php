@@ -15,13 +15,18 @@ class CreateEmployersTable extends Migration
     {
         Schema::create('employers', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('fname');
-            $table->string('lname');
+            $table->string('first_name');
+            $table->string('last_name');
             $table->string('phone');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('company_name');
+            $table->string('sector');
+            $table->string('no_employee');
+            $table->string('c_web');
+            $table->string('c_contact');
+            $table->string('c_address');
             $table->rememberToken();
             $table->timestamps();
         });

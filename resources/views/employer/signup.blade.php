@@ -5,19 +5,20 @@
 @section('content')
     <div class="container-fluid" style="background-color: #eeee">
         <div class="col-md-8 col-md-offset-2" style="margin-top: 50px">
-            <form action="" method="post" enctype="multipart/form-data">
+            <form action="{{route('employer.store')}}" method="post" enctype="multipart/form-data">
                 {{csrf_field()}}
                 <div class="panel panel-primary">
                     <div class="panel-heading">Personal Information</div>
                     <div class="panel-body">
                         <div class="reset-to-row main-form register-page">
+
                             <div class="row">
                                 <div class="form-group clearfix">
                                     <div class="col-xs-12 col-sm-3">
-                                        <label class="form-label" for="firstname">First name:</label>
+                                        <label class="form-label" for="surname">First Name:</label>
                                     </div>
                                     <div class="col-xs-12 col-sm-6">
-                                        <input type="text" id="firstname" name="fname" class="form-control input-lg" placeholder="First name">
+                                        <input type="text" id="first_name" name="first_name" value="{{old('first_name')}}" class="form-control input-lg" placeholder="First name">
                                     </div>
                                 </div>
                             </div>
@@ -27,7 +28,7 @@
                                         <label class="form-label" for="surname">Last Name:</label>
                                     </div>
                                     <div class="col-xs-12 col-sm-6">
-                                        <input type="text" id="surname" name="lname" class="form-control input-lg" placeholder="Last name">
+                                        <input type="text" id="last_name" name="last_name" value="{{old('last_name')}}" class="form-control input-lg" placeholder="Last name">
                                     </div>
                                 </div>
                             </div>
@@ -37,7 +38,7 @@
                                         <label class="form-label" for="surname">Phone:</label>
                                     </div>
                                     <div class="col-xs-12 col-sm-6">
-                                        <input type="number" id="phone" name="phone" class="form-control input-lg" placeholder="Phone Contact">
+                                        <input type="number" id="phone" name="phone"  value="{{old('phone')}}" class="form-control input-lg" placeholder="Phone Contact">
                                     </div>
                                 </div>
                             </div>
@@ -47,7 +48,7 @@
                                         <label class="form-label" for="email">Employer Email:</label>
                                     </div>
                                     <div class="col-xs-12 col-sm-6">
-                                        <input type="email" id="email" name="email" class="form-control input-lg" data-invalid-domain="false">
+                                        <input type="email" id="email" name="email"  value="{{old('email')}}" class="form-control input-lg" data-invalid-domain="false">
                                     </div>
                                 </div>
                             </div>
@@ -83,8 +84,8 @@
                             <div class="row">
                                 <div class="form-group clearfix">
                                     <div class="col-xs-12 col-sm-12">
-                                        <label class="form-label" for="companyname">Company Name</label>
-                                        <input type="text" id="c_name" name="companyname" class="form-control input-lg" placeholder="Company Name">
+                                        <label class="form-label" for="company_name">Company Name</label>
+                                        <input type="text" id="company_name" name="company_name" class="form-control input-lg" placeholder="Company Name">
                                     </div>
                                 </div>
                                 <div class="form-group clearfix">
@@ -138,20 +139,20 @@
                                 </div>
                                 <div class="form-group clearfix">
                                     <div class="col-xs-12 col-sm-12">
-                                        <label class="form-label" for="companyname">Website address</label>
-                                        <input type="url" id="c_web" name="companyname" class="form-control input-lg" placeholder="Company Name">
+                                        <label class="form-label" for="c_web">Website address</label>
+                                        <input type="text" id="c_web" name="c_web" class="form-control input-lg" placeholder="Company Website">
                                     </div>
                                 </div>
 
                                 <div class="form-group clearfix">
                                     <div class="col-xs-12 col-sm-12">
-                                        <label class="form-label" for="companyname">Phone Contact</label>
-                                        <input type="email" id="c_contact" name="companyname" class="form-control input-lg" placeholder="Company Name">
+                                        <label class="form-label" for="c_contact">Phone Contact</label>
+                                        <input type="number" id="c_contact" name="c_contact" class="form-control input-lg" placeholder="Company Name">
                                     </div>
                                 </div>
                                 <div class="form-group clearfix">
                                     <div class="col-xs-12 col-sm-12">
-                                        <label class="form-label" for="companyname">Address</label>
+                                        <label class="form-label" for="c_address">Address</label>
                                         <textarea name="c_address" id="" cols="30" rows="10" class="form-control"></textarea>
                                     </div>
                                 </div>

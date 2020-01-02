@@ -11,6 +11,7 @@
     </header>
 
     <div id="main">
+        @include('layouts.includes.errors')
         @yield('content')
     </div>
 

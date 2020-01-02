@@ -45,7 +45,7 @@
 
                         <li><a href="{{route('candidate.register')}}">Register Your CV</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="{{route('employer.register')}}">Employer</a></li>
+                        <li><a href="{{route('employer.create')}}">Employer</a></li>
                     </ul>
                 </div>
 

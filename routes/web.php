@@ -20,23 +20,15 @@ Route::get('/', function () {
 Route::get('/home', 'HomeController@index')->name('home');
 
 
-
 Route::get('/candidate/register', function (){
     return view('candidate.signup');
 })->name('candidate.register');
 
 
-Route::get('/employer/register', function (){
-    return view('employer.signup');
-})->name('employer.register');
-
-
-// Use for the role middlewares
-Route::middleware('role')->group(function () {
-
     Route::get('/login', function (){
         return view('login');
     })->name('login');
 
-});
+
+Route::resource('employer', 'EmployerController');
 
