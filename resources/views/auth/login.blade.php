@@ -57,7 +57,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div></div>
     </main>
     {{--<div class="container">--}}
     {{--    <div class="row justify-content-center">--}}

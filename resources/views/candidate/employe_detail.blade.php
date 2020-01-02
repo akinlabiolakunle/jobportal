@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.dash')
 @section('content')
     <div class="page_banner banner employer-banner">
         <div class="container">

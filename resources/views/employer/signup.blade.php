@@ -17,7 +17,7 @@
                                         <label class="form-label" for="firstname">First name:</label>
                                     </div>
                                     <div class="col-xs-12 col-sm-6">
-                                        <input type="text" id="firstname" name="firstname" class="form-control input-lg" placeholder="First name">
+                                        <input type="text" id="firstname" name="fname" class="form-control input-lg" placeholder="First name">
                                     </div>
                                 </div>
                             </div>
@@ -27,7 +27,7 @@
                                         <label class="form-label" for="surname">Last Name:</label>
                                     </div>
                                     <div class="col-xs-12 col-sm-6">
-                                        <input type="text" id="surname" name="surname" class="form-control input-lg" placeholder="Last name">
+                                        <input type="text" id="surname" name="lname" class="form-control input-lg" placeholder="Last name">
                                     </div>
                                 </div>
                             </div>
@@ -68,7 +68,7 @@
                                         <label class="form-label" for="confirmpassword">Confirm password:</label>
                                     </div>
                                     <div class="col-xs-12 col-sm-6">
-                                        <input type="password" id="confirmpassword" name="confirmpassword" class="form-control input-lg">
+                                        <input type="password" id="password" name="password" class="form-control input-lg">
                                     </div>
                                 </div>
                             </div>
@@ -84,7 +84,7 @@
                                 <div class="form-group clearfix">
                                     <div class="col-xs-12 col-sm-12">
                                         <label class="form-label" for="companyname">Company Name</label>
-                                        <input type="text" id="companyname" name="companyname" class="form-control input-lg" placeholder="Company Name">
+                                        <input type="text" id="c_name" name="companyname" class="form-control input-lg" placeholder="Company Name">
                                     </div>
                                 </div>
                                 <div class="form-group clearfix">
@@ -122,7 +122,7 @@
                                     </div>
                                     <div class="col-xs-12 col-sm-6">
                                         <label class="form-label" for="companyname">Number of Employees</label>
-                                        <select class="form-control"  id="number_of_employees" name="number_of_employees">
+                                        <select class="form-control"  id="no_employee" name="no_employee">
                                             <option value="" selected="selected">Select</option>
                                             <option value="1">1-4</option>
                                             <option value="2">5-10</option>
@@ -139,20 +139,20 @@
                                 <div class="form-group clearfix">
                                     <div class="col-xs-12 col-sm-12">
                                         <label class="form-label" for="companyname">Website address</label>
-                                        <input type="url" id="companyname" name="companyname" class="form-control input-lg" placeholder="Company Name">
+                                        <input type="url" id="c_web" name="companyname" class="form-control input-lg" placeholder="Company Name">
                                     </div>
                                 </div>
 
                                 <div class="form-group clearfix">
                                     <div class="col-xs-12 col-sm-12">
                                         <label class="form-label" for="companyname">Phone Contact</label>
-                                        <input type="email" id="companyname" name="companyname" class="form-control input-lg" placeholder="Company Name">
+                                        <input type="email" id="c_contact" name="companyname" class="form-control input-lg" placeholder="Company Name">
                                     </div>
                                 </div>
                                 <div class="form-group clearfix">
                                     <div class="col-xs-12 col-sm-12">
                                         <label class="form-label" for="companyname">Address</label>
-                                        <textarea name="" id="" cols="30" rows="10" class="form-control"></textarea>
+                                        <textarea name="c_address" id="" cols="30" rows="10" class="form-control"></textarea>
                                     </div>
                                 </div>
                             </div>

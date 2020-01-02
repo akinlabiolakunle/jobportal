@@ -100,8 +100,6 @@
                         </div>
                     </div>
                 </div>
-
-
                 <div class="panel panel-primary">
                     <div class="panel-heading">Qualification Information</div>
                     <div class="panel-body">
@@ -200,8 +198,9 @@
                             </div>
                         </div>
                     </div>
+
+                    <button type="submit" class="btn-block btn btn-primary">Submit</button>
                 </div>
             </form>
-
         </div>
 @endsection
