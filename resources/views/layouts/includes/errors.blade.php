@@ -7,17 +7,18 @@
             @endforeach
         </div>
     @endif
-        @if (session('message'))
-            <div class="alert alert-info">
-                * {{ session('message') }}
-                <button type="button" class="close" data-dismiss="alert">×</button>
-            </div>
-        @endif
+    @if (session('message'))
+        <div class="alert alert-info">
+            * {{ session('message') }}
+            <button type="button" class="close" data-dismiss="alert">×</button>
+        </div>
+    @endif
 
-        @if (session('status'))
-            <div class="alert alert-info">
-              * {{ session('status') }}
-                <button type="button" class="close" data-dismiss="alert">×</button>
-            </div>
-        @endif
+    @if (session('status'))
+        <div class="alert alert-info">
+            * {{ session('status') }}
+            <button type="button" class="close" data-dismiss="alert">×</button>
+        </div>
+    @endif
+
 </div>

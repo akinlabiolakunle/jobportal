@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Employer;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Validator;
 
 class EmployerController extends Controller
 {
@@ -41,26 +42,31 @@ class EmployerController extends Controller
      */
     public function store(Request $request)
     {
+        $data = $request->input();
 
-        // validate the data
-        $this->validate($request, array(
-            'email'  => 'required',
+        $validator = Validator::make($request->all(), [
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:employers'],
             'password'  => 'required',
             'first_name'  => 'required',
             'last_name'  => 'required',
-            'company_name'  => 'required',
+            'phone'  => 'required|unique:employers',
+            'company_name'  => 'required |max:255',
             'sector'  => 'required',
             'no_employee'  => 'required',
             'c_web'  => 'required',
             'c_contact'  => 'required',
             'c_address'  => 'required',
-        ));
-        // store in the database
+        ]);
 
-//        id	fname	lname	phone	email	email_verified_at	password	company_name	remember_token	created_at	updated_at
+        if ($validator->fails()) {
+            return back()
+                ->withErrors($validator)
+                ->withInput();
+        }
 
         $employer = new Employer;
-        $data = $request->input();
+
+
         $employer->first_name = $data['first_name'];
         $employer->last_name = $data['last_name'];
         $employer->phone = $data['phone'];
@@ -72,9 +78,11 @@ class EmployerController extends Controller
         $employer->c_web = $data['c_web'];
         $employer->c_contact = $data['c_contact'];
         $employer->c_address = $data['c_address'];
-        $employer->save();
-        return back()->with('status', 'The record was successfully saved!');
 
+//      dd($employer);
+        $employer->save();
+        return back()->with('error', 'The record was successfully saved!');
+//
 
 
     }
